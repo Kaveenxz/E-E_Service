@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="832.0" style="-fx-background-image: url('./images/bg.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemManagementFormController">
+   <top>
+      <GridPane fx:id="pane" prefHeight="760.0" prefWidth="833.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="1.0" prefWidth="45.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="691.0" minWidth="0.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="745.0" minWidth="100.0" prefWidth="678.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="691.0" minWidth="0.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="0.0" prefWidth="45.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="75.0" minHeight="34.0" prefHeight="47.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="508.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="670.0" minHeight="0.0" prefHeight="670.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="508.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="508.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="15.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane prefHeight="623.0" prefWidth="743.0" style="-fx-background-color: #F1FAEE; -fx-opaque-insets: 80%;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="731.0" minWidth="10.0" prefWidth="558.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="156.0" minHeight="3.0" prefHeight="67.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="594.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <GridPane GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="299.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="594.0" minHeight="10.0" prefHeight="594.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="12.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.0" minWidth="10.0" prefWidth="656.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.0" minWidth="10.0" prefWidth="11.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="581.0" minHeight="10.0" prefHeight="581.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="272.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="34.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="316.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="31.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="298.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="39.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="74.0" minHeight="1.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="45.0" prefWidth="279.0" text="Customer Name" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Calibri Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="45.0" prefWidth="279.0" text="Email Address" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Calibri Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="custnametxt" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" />
+                                    <JFXComboBox fx:id="category" prefHeight="47.0" prefWidth="329.0" promptText="Select Item Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <Label layoutX="31.0" layoutY="87.0" prefHeight="45.0" prefWidth="279.0" text="Item Name" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Calibri Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="21.0" prefHeight="45.0" prefWidth="279.0" text="Item Catecory" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Calibri Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="21.0" prefHeight="45.0" prefWidth="279.0" text="Contact Number" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Calibri Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="21.0" prefHeight="45.0" prefWidth="279.0" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Calibri Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="contactTxt" layoutX="352.0" layoutY="20.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <TextField fx:id="emailTxt" layoutX="10.0" layoutY="20.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <TextField fx:id="decsTxt" layoutX="352.0" layoutY="20.0" prefHeight="104.0" prefWidth="286.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                    <TextField fx:id="itemNameTxt" layoutX="10.0" layoutY="20.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                    <Button mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="54.0" prefWidth="183.0" style="-fx-font-size: 20px; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-background-color: #1D3557;" text="Save Order" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="73.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="584.0" minWidth="10.0" prefWidth="548.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="53.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="51.0" prefWidth="708.0" text="Place Order" textFill="#1d3557" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Calibri Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#backButtonOnAction" prefHeight="55.0" prefWidth="67.0">
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-back-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>
