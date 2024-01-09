@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="832.0" style="-fx-background-image: url('./images/bg.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserManagementFormController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="832.0" style="-fx-background-image: url('./images/bg.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemManagementFormController">
    <top>
       <GridPane fx:id="pane" prefHeight="760.0" prefWidth="833.0" BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -48,38 +48,36 @@
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>
                      <rowConstraints>
-                        <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="278.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="311.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="210.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="384.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
                         <GridPane>
-                          <columnConstraints>
+                           <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="34.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="316.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="31.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="298.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="31.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="298.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="39.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                              <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="1.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
                            <children>
-                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="5">
-                                <columnConstraints>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="156.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="9.0" prefWidth="15.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints maxHeight="13.0" minHeight="2.0" prefHeight="5.0" vgrow="SOMETIMES" />
-                                  <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-                                  <RowConstraints maxHeight="22.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="9.0" prefWidth="15.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="13.0" minHeight="2.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="22.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
                                  <children>
                                     <Button mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="44.0" prefWidth="158.0" style="-fx-font-size: 20px; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-background-color: #1D3557;" text="Save" GridPane.rowIndex="1" />
                                     <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="44.0" prefWidth="158.0" style="-fx-font-size: 20px; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-background-color: #00ff05;" text="Update" GridPane.columnIndex="2" GridPane.rowIndex="1" />
@@ -90,47 +88,34 @@
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="45.0" prefWidth="279.0" text="User Type" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font name="Calibri Bold" size="20.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="45.0" prefWidth="279.0" text="Password" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font name="Calibri Bold" size="20.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="45.0" prefWidth="279.0" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label prefHeight="45.0" prefWidth="279.0" text="Category" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
                               </Label>
                               <TextField fx:id="nametxt" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" />
-                              <TextField fx:id="emailTxt" layoutX="361.0" layoutY="13.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <TextField fx:id="password" layoutX="10.0" layoutY="13.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <JFXComboBox fx:id="loginMetod" prefHeight="47.0" prefWidth="329.0" promptText="Select User Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <JFXComboBox fx:id="category" prefHeight="47.0" prefWidth="329.0" promptText="Select Item Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="1">
-                          <columnConstraints>
+                           <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="12.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.0" minWidth="10.0" prefWidth="656.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.0" minWidth="10.0" prefWidth="656.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.0" minWidth="10.0" prefWidth="11.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="3.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="296.0" minHeight="10.0" prefHeight="284.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="272.0" minHeight="6.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="83.0" minHeight="0.0" prefHeight="3.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="351.0" minHeight="10.0" prefHeight="351.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="272.0" minHeight="6.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
                            <children>
-                              <JFXTreeTableView fx:id="tbluser" prefHeight="265.0" prefWidth="643.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <JFXTreeTableView fx:id="tblItem" prefHeight="265.0" prefWidth="643.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <columns>
-                                    <TreeTableColumn fx:id="colId" prefWidth="88.0" text="User Id" />
-                                    <TreeTableColumn fx:id="colName" prefWidth="117.0" text="User Name" />
-                                    <TreeTableColumn fx:id="colEmail" prefWidth="226.0" text="Email" />
-                                    <TreeTableColumn fx:id="colType" prefWidth="107.0" text="Type" />
-                                    <TreeTableColumn fx:id="colOption" prefWidth="116.0" text="Option" />
+                                    <TreeTableColumn fx:id="colId" prefWidth="88.0" text="Item Id" />
+                                    <TreeTableColumn fx:id="colName" prefWidth="218.0" text="Item Name" />
+                                    <TreeTableColumn fx:id="colCategory" prefWidth="194.0" text="Category" />
+                                    <TreeTableColumn fx:id="colOption" prefWidth="154.0" text="Option" />
                                  </columns>
                               </JFXTreeTableView>
                            </children>
@@ -138,14 +123,14 @@
                      </children>
                   </GridPane>
                   <GridPane>
-                    <columnConstraints>
+                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="73.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="584.0" minWidth="10.0" prefWidth="548.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="53.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="584.0" minWidth="10.0" prefWidth="548.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="53.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
                      <children>
                         <Label alignment="CENTER" prefHeight="51.0" prefWidth="708.0" text="User Management " textFill="#1d3557" GridPane.columnIndex="1">
                            <font>
