@@ -60,7 +60,14 @@ public class AdminDashboardFormController {
 
     @FXML
     void userManagementBtn(ActionEvent event) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserManagementForm.fxml"))));
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
