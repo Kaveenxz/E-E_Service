@@ -132,7 +132,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="51.0" prefWidth="708.0" text="User Management " textFill="#1d3557" GridPane.columnIndex="1">
+                        <Label alignment="CENTER" prefHeight="51.0" prefWidth="708.0" text="Item Management " textFill="#1d3557" GridPane.columnIndex="1">
                            <font>
                               <Font name="Calibri Bold" size="26.0" />
                            </font>

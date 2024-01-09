@@ -123,7 +123,7 @@
                                     <Font name="Calibri Bold" size="19.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Bill Management" textFill="#1d3557" GridPane.rowIndex="11">
+                              <JFXButton onAction="#placeOrderBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #E63946;" text="Place Order" textFill="WHITE" GridPane.rowIndex="11">
                                  <font>
                                     <Font name="Calibri Bold" size="19.0" />
                                  </font>
