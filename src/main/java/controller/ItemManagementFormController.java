@@ -17,6 +17,8 @@ import java.io.IOException;
 
 public class ItemManagementFormController {
 
+    public TextField qtyTxt;
+    public TreeTableColumn colqty;
     @FXML
     private GridPane pane;
 

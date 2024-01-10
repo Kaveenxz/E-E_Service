@@ -1,6 +1,8 @@
 package controller;
 
 import com.jfoenix.controls.JFXComboBox;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +15,7 @@ import java.io.IOException;
 
 public class PlaceOrderFormController {
 
+    public TextField costTxt;
     @FXML
     private GridPane pane;
 
@@ -20,7 +23,7 @@ public class PlaceOrderFormController {
     private TextField custnametxt;
 
     @FXML
-    private JFXComboBox<?> category;
+    private JFXComboBox<String> category;
 
     @FXML
     private TextField contactTxt;
@@ -33,6 +36,11 @@ public class PlaceOrderFormController {
 
     @FXML
     private TextField itemNameTxt;
+    public void initialize(){
+        ObservableList<String> options = FXCollections.observableArrayList("Electrical", "Electronic");
+
+        category.setItems(options);
+    }
 
     @FXML
     void backButtonOnAction(ActionEvent event) {

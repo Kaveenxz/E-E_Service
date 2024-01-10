@@ -1,7 +1,10 @@
 package controller;
 
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableView;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +15,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class OrderManagementFormController {   @FXML
+public class OrderManagementFormController {
+    public JFXTextField addcostTxt;
+    public TreeTableColumn colCost;
+    @FXML
 private GridPane pane;
 
     @FXML
-    private JFXComboBox<?> category;
+    private JFXComboBox<String> category;
 
     @FXML
     private JFXTreeTableView<?> tblItem;
@@ -32,6 +38,12 @@ private GridPane pane;
 
     @FXML
     private TreeTableColumn<?, ?> colOption;
+
+    public void initialize(){
+        ObservableList<String> options = FXCollections.observableArrayList("Yellow Zone", "Orange Zone", "Green Zone", "Red Zone");
+
+        category.setItems(options);
+    }
 
     @FXML
     void backButtonOnAction(ActionEvent event) {
