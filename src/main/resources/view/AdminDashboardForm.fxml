@@ -98,22 +98,12 @@
                             <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <JFXButton onAction="#userManagementBtn" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="User Management" textFill="#1d3557" GridPane.rowIndex="1">
+                              <JFXButton onAction="#userManagementBtn" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="User Management" textFill="#1d3557" GridPane.rowIndex="5">
                                  <font>
                                     <Font name="Calibri Bold" size="19.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton onAction="#itemManagementBtn" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Item Management" textFill="#1d3557" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font name="Calibri Bold" size="19.0" />
-                                 </font>
-                              </JFXButton>
-                              <JFXButton onAction="#inventoryManagementBtn" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Inventory Management" textFill="#1d3557" GridPane.rowIndex="5">
-                                 <font>
-                                    <Font name="Calibri Bold" size="19.0" />
-                                 </font>
-                              </JFXButton>
-                              <JFXButton onAction="#orderManagementBtn" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Order Management" textFill="#1d3557" GridPane.rowIndex="7">
+                              <JFXButton onAction="#inventoryManagementBtn" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Inventory Management" textFill="#1d3557" GridPane.rowIndex="7">
                                  <font>
                                     <Font name="Calibri Bold" size="19.0" />
                                  </font>
@@ -123,11 +113,11 @@
                                     <Font name="Calibri Bold" size="19.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton onAction="#placeOrderBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #E63946;" text="Place Order" textFill="WHITE" GridPane.rowIndex="11">
+                              <Label fx:id="lblTime" alignment="CENTER" prefHeight="88.0" prefWidth="232.0" text="HH:mm:ss" textFill="#1d3557" GridPane.rowIndex="1">
                                  <font>
-                                    <Font name="Calibri Bold" size="19.0" />
+                                    <Font name="Copperplate Gothic Bold" size="30.0" />
                                  </font>
-                              </JFXButton>
+                              </Label>
                            </children>
                         </GridPane>
                      </children>

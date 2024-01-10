@@ -50,7 +50,7 @@ public class ItemManagementFormController {
     void backButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) pane.getScene().getWindow();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AdminDashboardForm.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserDashboardForm.fxml"))));
             stage.centerOnScreen();
             stage.show();
         } catch (IOException e) {

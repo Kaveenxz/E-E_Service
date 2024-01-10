@@ -73,7 +73,7 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <ImageView fitHeight="484.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                <ImageView fitHeight="484.0" fitWidth="348.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                                     <image>
                                         <Image url="@../images/user.jpg" />
                                     </image>
@@ -91,36 +91,31 @@
                                         <RowConstraints maxHeight="286.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                                         <RowConstraints maxHeight="252.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
                                         <RowConstraints maxHeight="276.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="268.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="268.0" minHeight="0.0" prefHeight="3.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
                                         <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
-                                        <JFXButton onAction="#itemBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Item Management" textFill="#1d3557" GridPane.rowIndex="1">
+                                        <JFXButton onAction="#itemBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Item Management" textFill="#1d3557" GridPane.rowIndex="5">
                                             <font>
                                                 <Font name="Calibri Bold" size="19.0" />
                                             </font>
                                         </JFXButton>
-                                        <JFXButton onAction="#InventoryBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Inventory Management" textFill="#1d3557" GridPane.rowIndex="3">
+                                        <JFXButton onAction="#orderBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Order Management" textFill="#1d3557" GridPane.rowIndex="7">
                                             <font>
                                                 <Font name="Calibri Bold" size="19.0" />
                                             </font>
                                         </JFXButton>
-                                        <JFXButton onAction="#orderBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Order Management" textFill="#1d3557" GridPane.rowIndex="5">
+                                        <JFXButton onAction="#placeOrderBtnOnAction" prefHeight="86.0" prefWidth="214.0" style="-fx-background-color: #E63946;" text="Place Order" textFill="WHITE" GridPane.rowIndex="9">
                                             <font>
                                                 <Font name="Calibri Bold" size="19.0" />
                                             </font>
                                         </JFXButton>
-                                        <JFXButton onAction="#reportsBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Reports" textFill="#1d3557" GridPane.rowIndex="7">
-                                            <font>
-                                                <Font name="Calibri Bold" size="19.0" />
-                                            </font>
-                                        </JFXButton>
-                                        <JFXButton prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Bill Management" textFill="#1d3557" GridPane.rowIndex="9">
-                                            <font>
-                                                <Font name="Calibri Bold" size="19.0" />
-                                            </font>
-                                        </JFXButton>
+                              <Label fx:id="lblTime" alignment="CENTER" prefHeight="88.0" prefWidth="232.0" text="HH:mm:ss" textFill="#1d3557" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="30.0" />
+                                 </font>
+                              </Label>
                                     </children>
                                 </GridPane>
                             </children>
