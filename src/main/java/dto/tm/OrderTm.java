@@ -1,6 +1,8 @@
-package entity;
+package dto.tm;
 
-public class Orders {
+import javafx.scene.control.Button;
+
+public class OrderTm {
     private long orderId;
     private String customerName;
     private String note;
@@ -8,4 +10,5 @@ public class Orders {
     private String status;
     private double additionFee;
     private double totFee;
+    private Button btn;
 }

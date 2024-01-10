@@ -1,6 +1,6 @@
-package entity;
+package dto;
 
-public class User {
+public class UserDto {
     private long userId;
     private String userName;
     private String email;

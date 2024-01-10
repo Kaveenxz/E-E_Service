@@ -1,9 +1,11 @@
-package entity;
+package dto.tm;
 
-public class User {
+import javafx.scene.control.Button;
+
+public class UseerTm {
     private long userId;
     private String userName;
     private String email;
-    private String password;
     private String userType;
+    private Button btn;
 }

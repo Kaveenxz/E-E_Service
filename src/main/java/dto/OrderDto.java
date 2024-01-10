@@ -1,6 +1,6 @@
-package entity;
+package dto;
 
-public class Orders {
+public class OrderDto {
     private long orderId;
     private String customerName;
     private String note;
