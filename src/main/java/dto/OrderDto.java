@@ -1,5 +1,12 @@
 package dto;
 
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderDto {
     private long orderId;
     private String customerName;

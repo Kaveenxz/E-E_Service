@@ -14,7 +14,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InventoryManagementFormController {@FXML
+public class InventoryManagementFormController {
+    public TreeTableColumn colId;
+    @FXML
 private GridPane pane;
 
     @FXML
