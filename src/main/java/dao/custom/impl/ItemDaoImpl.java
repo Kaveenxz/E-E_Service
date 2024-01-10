@@ -25,7 +25,6 @@ public class ItemDaoImpl implements ItemDao {
     @Override
     public boolean update(Item entity) throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
-
         Transaction transaction = session.beginTransaction();
         Item item = session.find(Item.class, entity.getItemId());
         item.setName(entity.getName());

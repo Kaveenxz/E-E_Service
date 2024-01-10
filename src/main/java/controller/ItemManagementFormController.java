@@ -85,7 +85,9 @@ public class ItemManagementFormController {
 
     private void setData(TreeItem<ItemTm> newValue) {
         if (newValue != null) {
+            txtId.setEditable(false);
             ItemTm selectedItem = newValue.getValue();
+            txtId.setText(selectedItem.getId());
             qtyTxt.setText(String.valueOf(selectedItem.getQty()));
             nametxt.setText(selectedItem.getName());
         }
@@ -93,8 +95,10 @@ public class ItemManagementFormController {
 
     private void clearFields() {
         tblItem.refresh();
+        txtId.clear();
         nametxt.clear();
         qtyTxt.clear();
+        txtId.setEditable(true);
     }
     private void allItems() {
         ObservableList<ItemTm> tmList = FXCollections.observableArrayList();
@@ -188,13 +192,11 @@ public class ItemManagementFormController {
         try {
             boolean isSaved = itemBo.updateItem(dto);
             if (isSaved){
-                new Alert(Alert.AlertType.INFORMATION,"Item Saved!").show();
+                new Alert(Alert.AlertType.INFORMATION,"Item Updated!").show();
                 allItems();
                 clearFields();
             }
-        }catch (NullPointerException e){
-            new Alert(Alert.AlertType.WARNING,"Fill All forms!").show();
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
