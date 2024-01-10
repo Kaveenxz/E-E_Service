@@ -26,9 +26,9 @@
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="0.0" prefWidth="0.0" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints maxHeight="75.0" minHeight="34.0" prefHeight="47.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="508.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="689.0" minHeight="0.0" prefHeight="684.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.0" minHeight="23.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="508.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="705.0" minHeight="0.0" prefHeight="705.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="508.0" minHeight="0.0" prefHeight="17.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="508.0" minHeight="0.0" prefHeight="5.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
@@ -41,13 +41,12 @@
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="731.0" minWidth="10.0" prefWidth="55.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints maxHeight="156.0" minHeight="3.0" prefHeight="74.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="156.0" minHeight="0.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="156.0" minHeight="3.0" prefHeight="54.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="156.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="601.0" minHeight="10.0" prefHeight="601.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="633.0" minHeight="10.0" prefHeight="633.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <GridPane GridPane.rowIndex="3">
+                  <GridPane GridPane.rowIndex="2">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>
@@ -76,13 +75,14 @@
                         </JFXButton>
                      </children>
                   </GridPane>
-                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints maxHeight="292.0" minHeight="10.0" prefHeight="292.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="358.0" minHeight="10.0" prefHeight="309.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="329.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="351.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="358.0" minHeight="10.0" prefHeight="288.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <GridPane>
@@ -98,10 +98,11 @@
                               <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="1.7976931348623157E308" minHeight="1.0" prefHeight="58.0" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="156.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="9.0" prefWidth="15.0" />
@@ -117,33 +118,39 @@
                                     <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="44.0" prefWidth="158.0" style="-fx-font-size: 20px; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-background-color: #00ff05;" text="Update" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
-                              <Label prefHeight="45.0" prefWidth="279.0" text="Name" GridPane.columnIndex="1">
+                              <Label prefHeight="45.0" prefWidth="279.0" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="45.0" prefWidth="279.0" text="Category" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label prefHeight="45.0" prefWidth="279.0" text="Category" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="nametxt" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" />
-                              <JFXComboBox fx:id="itemTypeComBox" prefHeight="47.0" prefWidth="329.0" promptText="Select Item Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <Label layoutX="61.0" layoutY="72.0" prefHeight="45.0" prefWidth="279.0" text="QTY" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <TextField fx:id="nametxt" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <JFXComboBox fx:id="itemTypeComBox" prefHeight="47.0" prefWidth="329.0" promptText="Select Item Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label layoutX="61.0" layoutY="72.0" prefHeight="45.0" prefWidth="279.0" text="QTY" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="qtyTxt" layoutX="531.0" layoutY="14.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <JFXComboBox fx:id="statusCombBox" prefHeight="47.0" prefWidth="329.0" promptText="Change Status" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                              <Label prefHeight="45.0" prefWidth="279.0" text="Change Status" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <TextField fx:id="qtyTxt" layoutX="531.0" layoutY="14.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <JFXComboBox fx:id="statusCombBox" prefHeight="47.0" prefWidth="329.0" promptText="Change Status" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Label prefHeight="45.0" prefWidth="279.0" text="Change Status" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtId" layoutX="531.0" layoutY="127.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" />
+                              <Label layoutX="61.0" layoutY="73.0" prefHeight="45.0" prefWidth="279.0" text="ID" GridPane.columnIndex="1">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
                               </Label>
                            </children>
                         </GridPane>
-                        <JFXTreeTableView fx:id="tblItem" prefHeight="265.0" prefWidth="643.0" GridPane.rowIndex="1">
+                        <JFXTreeTableView fx:id="tblItem" prefHeight="265.0" prefWidth="643.0" GridPane.rowIndex="2">
                            <columns>
                               <TreeTableColumn fx:id="colId" prefWidth="139.0" text="Item Id" />
                               <TreeTableColumn fx:id="colName" prefWidth="162.0" text="Item Name" />

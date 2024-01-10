@@ -10,6 +10,6 @@ import java.util.List;
 public interface ItemBo extends SuperBo {
     boolean saveItem(ItemDto dto) throws SQLException, ClassNotFoundException;
     boolean updateItem(ItemDto dto) throws SQLException, ClassNotFoundException;
-    boolean deleteItem(long id) throws SQLException, ClassNotFoundException;
+    boolean deleteItem(String id) throws SQLException, ClassNotFoundException;
     List<ItemDto> allItems() throws SQLException, ClassNotFoundException;
 }

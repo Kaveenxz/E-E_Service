@@ -24,11 +24,22 @@ public class ItemDaoImpl implements ItemDao {
 
     @Override
     public boolean update(Item entity) throws SQLException, ClassNotFoundException {
-        return false;
+        Session session = HibernateUtil.getSession();
+
+        Transaction transaction = session.beginTransaction();
+        Item item = session.find(Item.class, entity.getItemId());
+        item.setName(entity.getName());
+        item.setCategory(entity.getCategory());
+        item.setQty(entity.getQty());
+        item.setStatus(entity.getStatus());
+        session.save(item);
+        transaction.commit();
+        session.close();
+        return true;
     }
 
     @Override
-    public boolean delete(long value) throws SQLException, ClassNotFoundException {
+    public boolean delete(String value) throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
         session.delete(session.find(Item.class,value));

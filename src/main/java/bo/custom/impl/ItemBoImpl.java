@@ -16,8 +16,8 @@ public class ItemBoImpl implements ItemBo {
     ItemDao itemDao = DaoFactory.getInstance().getDao(DaoType.ITEM);
     @Override
     public boolean saveItem(ItemDto dto) throws SQLException, ClassNotFoundException {
-
         return itemDao.save(new Item(
+                dto.getId(),
                 dto.getName(),
                 dto.getCategory(),
                 dto.getQty(),
@@ -31,7 +31,7 @@ public class ItemBoImpl implements ItemBo {
     }
 
     @Override
-    public boolean deleteItem(long id) throws SQLException, ClassNotFoundException {
+    public boolean deleteItem(String id) throws SQLException, ClassNotFoundException {
         return itemDao.delete(id);
     }
 

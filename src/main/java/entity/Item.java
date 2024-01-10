@@ -6,8 +6,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 @NoArgsConstructor
 @Setter
@@ -16,15 +14,15 @@ import javax.persistence.Id;
 @Entity
 public class Item {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long itemId;
+    private String itemId;
     private String name;
     private String category;
     private int qty;
     private String status;
 
 
-    public Item(String name, String category, int qty, String status) {
+    public Item(String id,String name, String category, int qty, String status) {
+        this.itemId=id;
         this.name=name;
         this.category=category;
         this.qty=qty;

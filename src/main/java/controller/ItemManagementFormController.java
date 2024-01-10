@@ -8,6 +8,7 @@ import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import dao.util.BoType;
+import dto.CustomerDto;
 import dto.ItemDto;
 import dto.tm.CustomerTm;
 import dto.tm.ItemTm;
@@ -17,10 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.layout.GridPane;
@@ -38,6 +36,7 @@ public class ItemManagementFormController {
     public TreeTableColumn colStatus;
     public JFXComboBox statusCombBox;
     public JFXComboBox itemTypeComBox;
+    public TextField txtId;
     @FXML
     private GridPane pane;
 
@@ -78,8 +77,25 @@ public class ItemManagementFormController {
         colStatus.setCellValueFactory(new TreeItemPropertyValueFactory<>("status"));
         colOption.setCellValueFactory(new TreeItemPropertyValueFactory<>("btn"));
         allItems();
+
+        tblItem.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
+            setData(newValue);
+        });
     }
 
+    private void setData(TreeItem<ItemTm> newValue) {
+        if (newValue != null) {
+            ItemTm selectedItem = newValue.getValue();
+            qtyTxt.setText(String.valueOf(selectedItem.getQty()));
+            nametxt.setText(selectedItem.getName());
+        }
+    }
+
+    private void clearFields() {
+        tblItem.refresh();
+        nametxt.clear();
+        qtyTxt.clear();
+    }
     private void allItems() {
         ObservableList<ItemTm> tmList = FXCollections.observableArrayList();
 
@@ -108,12 +124,12 @@ public class ItemManagementFormController {
         }
     }
 
-    private void deleteItem(long id) {
+    private void deleteItem(String id) {
         try {
             boolean isDeleted = itemBo.deleteItem(id);
             if (isDeleted){
                 new Alert(Alert.AlertType.INFORMATION,"Customer Deleted!").show();
-                //loadItemTable();
+                allItems();
             }else{
                 new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
             }
@@ -138,6 +154,7 @@ public class ItemManagementFormController {
     @FXML
     void saveBtnOnAction(ActionEvent event) {
         ItemDto dto = new ItemDto(
+                txtId.getText(),
                 nametxt.getText(),
                 itemTypeComBox.getValue().toString(),
                 Integer.parseInt(qtyTxt.getText()),
@@ -148,8 +165,8 @@ public class ItemManagementFormController {
             boolean isSaved = itemBo.saveItem(dto);
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION,"Item Saved!").show();
-                //loadItemTable();
-                //clearFields();
+                allItems();
+                clearFields();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -160,7 +177,28 @@ public class ItemManagementFormController {
 
     @FXML
     void updateBtnOnAction(ActionEvent event) {
+        ItemDto dto = new ItemDto(
+                txtId.getText(),
+                nametxt.getText(),
+                itemTypeComBox.getValue().toString(),
+                Integer.parseInt(qtyTxt.getText()),
+                statusCombBox.getValue().toString()
+        );
 
+        try {
+            boolean isSaved = itemBo.updateItem(dto);
+            if (isSaved){
+                new Alert(Alert.AlertType.INFORMATION,"Item Saved!").show();
+                allItems();
+                clearFields();
+            }
+        }catch (NullPointerException e){
+            new Alert(Alert.AlertType.WARNING,"Fill All forms!").show();
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

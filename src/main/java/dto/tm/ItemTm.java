@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ItemTm extends RecursiveTreeObject<ItemTm> {
-    private long id;
+    private String id;
     private String name;
     private String category;
     private int qty;
