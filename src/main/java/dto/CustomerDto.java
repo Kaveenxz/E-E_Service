@@ -7,8 +7,9 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerDto {    private long custId;
-    private long custName;
+public class CustomerDto {
+    private String custId;
+    private String custName;
     private String custEmail;
     private String custContact;
 

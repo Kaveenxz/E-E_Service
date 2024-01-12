@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -76,8 +77,8 @@
                            </font>
                         </Label>
                         <TextField fx:id="emailTxt" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField fx:id="passwordTxt" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-weight: bold; -fx-font-size: 18px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <JFXComboBox fx:id="loginMetod" prefHeight="47.0" prefWidth="303.0" promptText="Select User Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="paswordTxt" prefHeight="58.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
                      </children>
                   </GridPane>

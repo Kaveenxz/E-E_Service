@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDto {
-    private long orderId;
+    private String orderId;
     private String customerName;
     private String note;
     private String date;

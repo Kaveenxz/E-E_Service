@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -16,6 +17,7 @@ import java.io.IOException;
 public class LoginFormController {
 
     public JFXComboBox loginMetod;
+    public PasswordField paswordTxt;
 
     @FXML
     private TextField emailTxt;
@@ -32,7 +34,7 @@ public class LoginFormController {
     @FXML
     void siginBtnOnAction(ActionEvent event) {
         String email = emailTxt.getText();
-        String password = passwordTxt.getText();
+        String password = paswordTxt.getText();
 
         if(loginMetod.getValue() == "Admin"){
             Stage stage = (Stage) loginMetod.getScene().getWindow();

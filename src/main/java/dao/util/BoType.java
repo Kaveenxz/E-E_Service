@@ -1,5 +1,5 @@
 package dao.util;
 
 public enum BoType {
-    ITEM
+    CUSTOMER, ITEM, ORDER, ORDER_DETAIL
 }

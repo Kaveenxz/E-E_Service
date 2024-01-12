@@ -96,7 +96,7 @@
                                         <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
-                                        <JFXButton onAction="#itemBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Item Management" textFill="#1d3557" GridPane.rowIndex="5">
+                                        <JFXButton onAction="#itemBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Item Management" textFill="#1d3557" GridPane.rowIndex="3">
                                             <font>
                                                 <Font name="Calibri Bold" size="19.0" />
                                             </font>
@@ -116,6 +116,11 @@
                                     <Font name="Copperplate Gothic Bold" size="30.0" />
                                  </font>
                               </Label>
+                              <JFXButton layoutX="10.0" layoutY="158.0" onAction="#customerBtnOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #A8DADC;" text="Customer Management" textFill="#1d3557" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Calibri Bold" size="19.0" />
+                                 </font>
+                              </JFXButton>
                                     </children>
                                 </GridPane>
                             </children>

@@ -1,7 +1,13 @@
 package dto.tm;
 
 import javafx.scene.control.Button;
+import lombok.*;
 
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderTm {
     private long orderId;
     private String customerName;
