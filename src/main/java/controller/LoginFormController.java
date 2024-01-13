@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
@@ -42,7 +43,6 @@ public class LoginFormController {
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(userList);
     }
     @FXML
     public void siginBtnOnAction(ActionEvent event) {
@@ -111,14 +111,20 @@ public class LoginFormController {
     }
 
     public void sendOTPOBtnnAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) loginMetod.getScene().getWindow();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ForgetPasswordForm.fxml"))));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ForgetPasswordForm.fxml"));
+            Parent root = loader.load();
+
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+            newStage.setTitle("Forget Password");
+
+            newStage.show();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        stage.centerOnScreen();
-        stage.show();
     }
+
 
 }

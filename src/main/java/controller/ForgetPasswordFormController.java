@@ -8,8 +8,6 @@ import java.util.Properties;
 
 import bo.BoFactory;
 import bo.custom.UserBo;
-import bo.custom.impl.UserBoImpl;
-import com.sun.javafx.stage.EmbeddedWindow;
 import dao.util.BoType;
 import dto.UserDto;
 import javafx.event.ActionEvent;
@@ -18,8 +16,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -39,11 +35,9 @@ public class ForgetPasswordFormController {
 
         if (isValidEmail(email)) {
 
-            // Check if the email exists in the database
             UserDto userDto = userBo.getUserByEmail(email);
 
             if (userDto != null) {
-                // Email exists, generate and send OTP
                 generatedOTP = generateOTP();
                 sendOTPEmail(email, generatedOTP);
 
@@ -53,7 +47,6 @@ public class ForgetPasswordFormController {
                 alert.setContentText("An OTP has been sent to your email. Check your inbox.");
                 alert.showAndWait();
             } else {
-                // Show an error message for a non-existing email
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Email Not Found");
                 alert.setHeaderText(null);
@@ -61,7 +54,6 @@ public class ForgetPasswordFormController {
                 alert.showAndWait();
             }
         } else {
-            // Show an error message for an invalid email
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Invalid Email");
             alert.setHeaderText(null);
@@ -104,10 +96,8 @@ public class ForgetPasswordFormController {
         String enteredOTP = otptxt.getText();
 
         if (enteredOTP != null && enteredOTP.equals(generatedOTP)) {
-            // OTP verified. Allow password reset.
             showPasswordResetWindow();
         } else {
-            // Show an error message for incorrect OTP
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Invalid OTP");
             alert.setHeaderText(null);
@@ -116,13 +106,11 @@ public class ForgetPasswordFormController {
         }
     }
 
-    // Add a new method to show the password reset window
     private void showPasswordResetWindow() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ResetPasswordForm.fxml"));
             Parent root = loader.load();
 
-            // Access the controller and set the user email
             ResetPasswordFormController resetPasswordController = loader.getController();
             resetPasswordController.setUserEmail(emailField.getText());
 
@@ -144,4 +132,6 @@ public class ForgetPasswordFormController {
     private boolean isValidEmail(String email) {
         return email != null && email.matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}");
     }
+
+
 }
