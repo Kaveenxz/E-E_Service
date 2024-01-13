@@ -8,7 +8,9 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDetaiDto {
-    private long orerDetailId;
-    private long itemCode;
+    private String orerId;
+    private String itemCode;
     private double cost;
+    private double additionFee;
+
 }

@@ -2,6 +2,8 @@ package dao;
 
 import dao.custom.impl.CustomerDaoImpl;
 import dao.custom.impl.ItemDaoImpl;
+import dao.custom.impl.OrderDaoImpl;
+import dao.custom.impl.UserDaoImpl;
 import dao.util.DaoType;
 
 public class DaoFactory {
@@ -18,6 +20,8 @@ public class DaoFactory {
         switch (type){
             case ITEM: return(T) new ItemDaoImpl();
             case CUSTOMER: return(T) new CustomerDaoImpl();
+            case ORDER: return(T) new OrderDaoImpl();
+            case USER: return(T) new UserDaoImpl();
 
         }
         return null;

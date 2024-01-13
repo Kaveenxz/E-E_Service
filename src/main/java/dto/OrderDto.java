@@ -2,6 +2,8 @@ package dto;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
@@ -9,10 +11,9 @@ import lombok.*;
 @NoArgsConstructor
 public class OrderDto {
     private String orderId;
-    private String customerName;
-    private String note;
     private String date;
-    private String status;
-    private double additionFee;
-    private double totFee;
+    private String custId;
+
+    private List<OrderDetaiDto> list;
+
 }

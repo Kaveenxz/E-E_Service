@@ -5,8 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Setter
@@ -15,21 +16,18 @@ import javax.persistence.Id;
 @Entity
 public class Orders {
     @Id
-    private long orderId;
-    private String customerName;
-    private String note;
+    private String orderId;
     private String date;
-    private String status;
-    private double additionFee;
-    private double totFee;
 
-    public Orders(long orderId, String customerName, String note, String date, String status, double additionFee, double totFee) {
+    @ManyToOne
+    @JoinColumn(name = "Customer_id")
+    private Customer customer;
+
+    @OneToMany(mappedBy = "orders")
+    private List<OrderDetail> orderDetails = new ArrayList<>();
+
+    public Orders(String orderId,String date) {
         this.orderId = orderId;
-        this.customerName = customerName;
-        this.note = note;
         this.date = date;
-        this.status = status;
-        this.additionFee = additionFee;
-        this.totFee = totFee;
     }
 }

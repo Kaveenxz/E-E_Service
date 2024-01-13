@@ -1,5 +1,6 @@
 package controller;
 
+import bo.EmailValidation;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,6 +14,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LoginFormController {
 
@@ -36,7 +39,7 @@ public class LoginFormController {
         String email = emailTxt.getText();
         String password = paswordTxt.getText();
 
-        if(loginMetod.getValue() == "Admin"){
+        if(loginMetod.getValue() == "Admin" && EmailValidation.isValidEmail(email)){
             Stage stage = (Stage) loginMetod.getScene().getWindow();
             try {
                 stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AdminDashboardForm.fxml"))));
@@ -62,6 +65,5 @@ public class LoginFormController {
     public void sendOTPOBtnnAction(ActionEvent actionEvent) {
 
     }
-
 
 }

@@ -5,8 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Setter
@@ -14,16 +13,19 @@ import javax.persistence.Id;
 @ToString
 @Entity
 public class OrderDetail {
-    @Id
-    private Long orderIDetaild;
-    private long orerDetailId;
-    private long itemCode;
+    @EmbeddedId
+    private OrderDetailKey id;
+
+    @ManyToOne
+    @MapsId("itemCode")
+    @JoinColumn(name = "item_code")
+    Item item;
+
+    @ManyToOne
+    @MapsId("orderId")
+    @JoinColumn(name = "order_id")
+    Orders orders;
     private double cost;
 
-    public OrderDetail(Long orderIDetaild, long orerDetailId, long itemCode, double cost) {
-        this.orderIDetaild = orderIDetaild;
-        this.orerDetailId = orerDetailId;
-        this.itemCode = itemCode;
-        this.cost = cost;
-    }
+
 }

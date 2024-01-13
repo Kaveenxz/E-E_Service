@@ -9,12 +9,10 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderTm {
-    private long orderId;
+    private String itemId;
     private String customerName;
-    private String note;
-    private String date;
     private String status;
-    private double additionFee;
     private double totFee;
+    private String date;
     private Button btn;
 }

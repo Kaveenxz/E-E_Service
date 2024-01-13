@@ -111,24 +111,24 @@
                         <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label prefHeight="45.0" prefWidth="279.0" text="Customer Name" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label prefHeight="45.0" prefWidth="279.0" text="Customer Name" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="45.0" prefWidth="279.0" text="Email Address" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label prefHeight="45.0" prefWidth="279.0" text="Email Address" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="custnametxt" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                        <JFXComboBox fx:id="category" prefHeight="47.0" prefWidth="329.0" promptText="Select Item Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                        <TextField fx:id="custnametxt" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <JFXComboBox fx:id="category" prefHeight="47.0" prefWidth="329.0" promptText="Select Item Type" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
                         <Label layoutX="31.0" layoutY="87.0" prefHeight="45.0" prefWidth="279.0" text="Item Name" GridPane.columnIndex="1" GridPane.rowIndex="6">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="10.0" layoutY="21.0" prefHeight="45.0" prefWidth="279.0" text="Item Catecory" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                        <Label layoutX="10.0" layoutY="21.0" prefHeight="45.0" prefWidth="315.0" text="Item Catecory" GridPane.columnIndex="1" GridPane.rowIndex="7">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
@@ -138,14 +138,14 @@
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="10.0" layoutY="21.0" prefHeight="45.0" prefWidth="279.0" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                        <Label layoutX="10.0" layoutY="21.0" prefHeight="45.0" prefWidth="279.0" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="8">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
                         <TextField fx:id="contactTxt" layoutX="352.0" layoutY="20.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                        <TextField fx:id="emailTxt" layoutX="10.0" layoutY="20.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <TextField fx:id="decsTxt" layoutX="352.0" layoutY="20.0" prefHeight="52.0" prefWidth="325.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <TextField fx:id="emailTxt" layoutX="10.0" layoutY="20.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="decsTxt" layoutX="352.0" layoutY="20.0" prefHeight="52.0" prefWidth="325.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="8" />
                         <TextField fx:id="itemNameTxt" layoutX="10.0" layoutY="20.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
                         <Button mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="54.0" prefWidth="183.0" style="-fx-font-size: 20px; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-background-color: #1D3557;" text="Place Order" GridPane.columnIndex="1" GridPane.rowIndex="10" />
                         <Label layoutX="71.0" layoutY="345.0" prefHeight="45.0" prefWidth="279.0" text="Cost" GridPane.columnIndex="1" GridPane.rowIndex="9">
@@ -154,18 +154,23 @@
                            </font>
                         </Label>
                         <TextField fx:id="costTxt" layoutX="472.0" layoutY="341.0" prefHeight="44.0" prefWidth="325.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                        <Label layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="279.0" text="Customer ID" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="279.0" text="Customer ID" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
-                        <JFXComboBox fx:id="combId" prefHeight="50.0" prefWidth="344.0" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Label layoutX="71.0" layoutY="90.0" prefHeight="45.0" prefWidth="279.0" text="Order ID" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <JFXComboBox fx:id="combId" prefHeight="50.0" prefWidth="344.0" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label layoutX="71.0" layoutY="90.0" prefHeight="45.0" prefWidth="279.0" text="Item ID" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="orderId" layoutX="472.0" layoutY="150.0" prefHeight="46.0" prefWidth="272.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <JFXComboBox fx:id="comdItemCode" layoutX="472.0" layoutY="32.0" prefHeight="50.0" prefWidth="344.0" style="-fx-background-color: A8DADC;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label fx:id="fx" prefHeight="45.0" prefWidth="137.0" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                           <font>
+                              <Font name="Calibri Bold" size="21.0" />
+                           </font>
+                        </Label>
                      </children>
                   </GridPane>
                   <GridPane GridPane.columnIndex="1">
