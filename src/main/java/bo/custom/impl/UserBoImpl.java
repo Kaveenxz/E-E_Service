@@ -4,9 +4,7 @@ import bo.custom.UserBo;
 import dao.DaoFactory;
 import dao.custom.UserDao;
 import dao.util.DaoType;
-import dto.ItemDto;
 import dto.UserDto;
-import entity.Item;
 import entity.User;
 
 import java.security.MessageDigest;
@@ -21,51 +19,25 @@ public class UserBoImpl implements UserBo {
     @Override
     public boolean saveUser(UserDto dto) throws SQLException, ClassNotFoundException {
 
-
-        String password = dto.getPassword();
-        String encryptedpassword = null;
-        try
-        {
-            /* MessageDigest instance for MD5. */
-            MessageDigest m = MessageDigest.getInstance("MD5");
-
-            /* Add plain-text password bytes to digest using MD5 update() method. */
-            m.update(password.getBytes());
-
-            /* Convert the hash value into bytes */
-            byte[] bytes = m.digest();
-
-            /* The bytes array has bytes in decimal form. Converting it into hexadecimal format. */
-            StringBuilder s = new StringBuilder();
-            for(int i=0; i< bytes.length ;i++)
-            {
-                s.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
-            }
-
-            /* Complete hashed password in hexadecimal format */
-            encryptedpassword = s.toString();
-        }
-        catch (NoSuchAlgorithmException e)
-        {
-            e.printStackTrace();
-        }
+        String password = hashPassword(dto.getPassword());
         return userDao.save(new User(
                 dto.getUserId(),
                 dto.getUserName(),
                 dto.getEmail(),
-                encryptedpassword,
+                password,
                 dto.getUserType()
         ));
     }
 
     @Override
     public boolean updateUser(UserDto dto) throws SQLException, ClassNotFoundException {
+        String password = hashPassword(dto.getPassword());
         return userDao.update(new User(
                 dto.getUserId(),
                 dto.getUserName(),
                 dto.getEmail(),
                 dto.getUserType(),
-                dto.getPassword()
+                password
         ));
     }
 
@@ -78,16 +50,34 @@ public class UserBoImpl implements UserBo {
     public List<UserDto> allUsers() throws SQLException, ClassNotFoundException {
         List<User> entityList = userDao.getAll();
         List<UserDto> dtoList = new ArrayList<>();
-        for (User user: entityList) {
+        for (User user : entityList) {
+            // Instead of passing the hashed password, pass the original password
             dtoList.add(new UserDto(
                     user.getUserId(),
                     user.getUserName(),
                     user.getEmail(),
-                    user.getPassword(),
+                    user.getPassword(),  // Original password
                     user.getUserType()
             ));
         }
         return dtoList;
     }
 
+
+    public String hashPassword(String plainTextPassword) {
+        String encryptedPassword = null;
+        try {
+            MessageDigest m = MessageDigest.getInstance("MD5");
+            m.update(plainTextPassword.getBytes());
+            byte[] bytes = m.digest();
+            StringBuilder s = new StringBuilder();
+            for (int i = 0; i < bytes.length; i++) {
+                s.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+            encryptedPassword = s.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return encryptedPassword;
+    }
 }
