@@ -2,6 +2,7 @@ package dao.custom.impl;
 
 import dao.custom.UserDao;
 import dao.util.HibernateUtil;
+import dto.UserDto;
 import entity.Item;
 import entity.User;
 import org.hibernate.Session;
@@ -53,4 +54,23 @@ public class UserDaoImpl implements UserDao {
         session.close();
         return list;
     }
+
+    @Override
+    public User getById(String userId) throws SQLException, ClassNotFoundException {
+        Session session = HibernateUtil.getSession();
+        return session.find(User.class, userId);
+    }
+
+    @Override
+    public User getUserByEmail(String email) throws SQLException, ClassNotFoundException {
+        Session session = HibernateUtil.getSession();
+        Query<User> query = session.createQuery("FROM User WHERE email = :email", User.class);
+        query.setParameter("email", email);
+        return query.uniqueResult();
+    }
+
 }
+
+
+
+

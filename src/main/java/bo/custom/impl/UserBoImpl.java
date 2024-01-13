@@ -7,6 +7,7 @@ import dao.util.DaoType;
 import dto.UserDto;
 import entity.User;
 
+import javax.persistence.NonUniqueResultException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
@@ -36,8 +37,9 @@ public class UserBoImpl implements UserBo {
                 dto.getUserId(),
                 dto.getUserName(),
                 dto.getEmail(),
-                dto.getUserType(),
-                password
+                password,
+                dto.getUserType()
+
         ));
     }
 
@@ -80,4 +82,43 @@ public class UserBoImpl implements UserBo {
         }
         return encryptedPassword;
     }
+
+    @Override
+    public UserDto getUserById(String userId) throws SQLException, ClassNotFoundException {
+        User user = userDao.getById(userId);
+        if (user != null) {
+            return new UserDto(
+                    user.getUserId(),
+                    user.getUserName(),
+                    user.getEmail(),
+                    user.getPassword(),  // Original password
+                    user.getUserType()
+            );
+        }
+        return null;
+    }
+
+    @Override
+    public UserDto getUserByEmail(String email) throws SQLException, ClassNotFoundException {
+        try {
+            User user = userDao.getUserByEmail(email);
+
+            if (user != null) {
+                return new UserDto(
+                        user.getUserId(),
+                        user.getUserName(),
+                        user.getEmail(),
+                        user.getPassword(),
+                        user.getUserType()
+                );
+            } else {
+                return null;
+            }
+        } catch (NonUniqueResultException e) {
+            e.printStackTrace();
+            // Handle the exception, log it, or throw a custom exception
+            return null;
+        }
+    }
+
 }
