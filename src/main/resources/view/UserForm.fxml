@@ -100,15 +100,15 @@
                               <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <TextField fx:id="emailTxt" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="emailTxt1" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField fx:id="emailTxt2" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label prefHeight="45.0" prefWidth="279.0" text="Change Name" GridPane.rowIndex="1">
+                              <TextField fx:id="txtName" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtPassword" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="txtemail" prefHeight="46.0" prefWidth="291.0" style="-fx-background-color: A8DADC; -fx-font-size: 18px; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label prefHeight="45.0" prefWidth="279.0" text="Name" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="44.0" prefWidth="279.0" text="Change E-mail " GridPane.rowIndex="3">
+                              <Label prefHeight="44.0" prefWidth="279.0" text="E-mail " GridPane.rowIndex="3">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>

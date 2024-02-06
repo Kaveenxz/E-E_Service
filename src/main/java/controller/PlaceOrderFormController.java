@@ -159,20 +159,25 @@ public class PlaceOrderFormController {
 
     @FXML
     void saveBtnOnAction(ActionEvent event) {
+        if (comdItemCode.getValue() == null || costTxt.getText().isEmpty() || combId.getValue() == null || fx.getText().isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Please fill in all required fields!").show();
+            return;
+        }
+
         JFXButton btn = new JFXButton("Delete");
 
         OrderTm tm = new OrderTm(
                 comdItemCode.getValue().toString(),
                 custnametxt.getText(),
-                "Prosess",
+                "Process",
                 Double.parseDouble(costTxt.getText()),
-                LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),
                 btn
         );
         tmList.add(tm);
 
         List<OrderDetaiDto> list = new ArrayList<>();
-        for (OrderTm tmlist:tmList) {
+        for (OrderTm tmlist : tmList) {
             list.add(new OrderDetaiDto(
                     fx.getText(),
                     tmlist.getItemId(),
@@ -183,25 +188,25 @@ public class PlaceOrderFormController {
 
         OrderDto dto = new OrderDto(
                 fx.getText(),
-                LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),
                 combId.getValue().toString(),
                 list
         );
 
-
         try {
             boolean isSaved = orderBo.saveOrder(dto);
-            if (isSaved){
+            if (isSaved) {
                 new Alert(Alert.AlertType.INFORMATION, "Order Saved!").show();
                 setOrderId();
-            }else{
+            } else {
                 new Alert(Alert.AlertType.ERROR, "Something went wrong!").show();
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
+
 
 }

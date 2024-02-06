@@ -22,6 +22,22 @@ public class AdminFormController {
         }
     }
 
-    public void saveChangesBtnOnAction(ActionEvent actionEvent) {
+
+
+    public void customerrReportsBtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void orderReportsBtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void salesReportsBtnOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/SalesReportsForm.fxml"))));
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

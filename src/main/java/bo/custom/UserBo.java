@@ -13,7 +13,7 @@ public interface UserBo extends SuperBo {
     boolean deleteUser(String id) throws SQLException, ClassNotFoundException;
     List<UserDto> allUsers() throws SQLException, ClassNotFoundException;
     String hashPassword(String enteredPassword);
-    UserDto getUserById(String userId) throws Exception;
+    boolean updateUserPassword(String userId, String newPassword) throws SQLException, ClassNotFoundException;
     UserDto getUserByEmail(String email) throws SQLException, ClassNotFoundException;
 
 }
